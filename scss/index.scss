@@ -38,7 +38,7 @@ img{
     right:43px;
     top:70px;
     z-index:1000;
-    display:none;
+//  display:none;
   
 }
 
@@ -333,6 +333,49 @@ section{
             height: 265px;
             float:left;
             padding-top: 5px;
+            position: relative;
+            #time{
+                width:145px;
+                height:40px;
+                position:absolute;
+                left:20px;
+                top:170px;
+                span{
+                    display:block;
+                    width:37px;
+                    height: 37px;
+                    line-height: 37px;
+                    text-align:center;
+                    float:left;
+                    color:#fff;
+                }
+                i{
+                    display:block;
+                    width:17px;
+                    height: 40px;
+                    line-height:40px;
+                    text-align:center;
+                    float:left;
+                    color:#fff;
+                }
+            }
+//          span{
+//              position: absolute;
+//              width:40px;
+//              height:40px;
+//              top:170px;
+//              background: green;
+//              margin-right:2px;
+//          }
+//          #hour{
+//              left:20px;
+//          }
+//          #min{
+//              left:40px;
+//          }
+//          #sec{
+//              left:60px;
+//          }
         }
         .goods{
             width: 1010px;

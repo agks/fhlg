@@ -27,8 +27,19 @@ gulp.task("images", () => {
 const scss = require("gulp-scss"),	 
 	  minify = require("gulp-minify-css"),
 	  rename = require("gulp-rename");
+//scss-index
 gulp.task("scss-index", () => {
 	return gulp.src("scss/index.scss")
+	.pipe(scss())
+	.pipe(gulp.dest("dist/css"))
+	.pipe(rename({"suffix": ".min"}))
+	.pipe(minify())
+	.pipe(gulp.dest("dist/css"))
+	.pipe(connect.reload());
+})
+//scss-list
+gulp.task("scss-list", () => {
+	return gulp.src("scss/list.scss")
 	.pipe(scss())
 	.pipe(gulp.dest("dist/css"))
 	.pipe(rename({"suffix": ".min"}))
@@ -63,6 +74,7 @@ gulp.task("watch", () => {
 	gulp.watch("js/*.js", ["scripts"]);
 	gulp.watch("data/*.json", ["data"]);
 	gulp.watch("scss/index.scss", ["scss-index"]);
+	gulp.watch("scss/list.scss", ["scss-list"]);
 })
 
 // 启动服务器 gulp-connect

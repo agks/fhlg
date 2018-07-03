@@ -1,5 +1,5 @@
-define(function(){
-	function side(obj){
+define(["jquery-1.11.3.js"], function(){
+	function side(){
 		window.onscroll = function(){
 			var scrollTop = document.documentElementscrollTop || document.body.scrollTop;
 			if(scrolltop >= 70){
