@@ -31,7 +31,7 @@ define(["tool"], function(tool){
 			leftSpan.id = "ltBtn";
 			this.ele.appendChild(leftSpan);
 			let rightSpan = tool.$create("span");
-			rightSpan.id = "rtBtn";
+			rightSpan.id = "rtBtn"; 
 			this.ele.appendChild(rightSpan);
 			
 			return arrLis;
